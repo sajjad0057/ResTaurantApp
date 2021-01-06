@@ -18,5 +18,6 @@ export default HomeScreen;
 const styles = StyleSheet.create({
     view : {
         paddingTop : Platform.OS==='ios' ? 0 : Constants.statusBarHeight,
+        //here the Placform API provide the device Type,  for more see react-native API
     }
 });

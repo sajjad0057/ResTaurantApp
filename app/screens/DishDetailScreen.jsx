@@ -4,7 +4,7 @@ import { View, Text } from 'react-native'
 const DishDetailScreen = () => {
     return (
         <View>
-            <Text></Text>
+            <Text>DishDetailScreen</Text>
         </View>
     )
 }

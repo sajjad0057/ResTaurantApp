@@ -1,12 +1,17 @@
-import React from 'react'
-import { View, Text } from 'react-native'
+import React from "react";
+import { View, Text, Button } from "react-native";
 
-const MenuScreen = () => {
-    return (
-        <View>
-            <Text></Text>
-        </View>
-    )
-}
+const MenuScreen = (props) => {
+  console.log("MenuScreen props--->", props);
 
-export default MenuScreen
+  return (
+    <View>
+      <Text>MenuScreen</Text>
+      <Button 
+      title = "Dish Detail"
+      onPress={()=>props.navigation.navigate("Dish Detail")}/>
+    </View>
+  );
+};
+
+export default MenuScreen;
