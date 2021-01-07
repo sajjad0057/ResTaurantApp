@@ -6,7 +6,7 @@ const DishDetailScreen = (props) => {
     const dish = props.route.params.dish
   //const route = useRoute()
   //console.log("DishDetailScreen route---->: ", route.params.dish);
-  console.log("DishDetailScreen ---->: ",dish);
+  //console.log("DishDetailScreen ---->: ",dish);
   return (
     <View>
       <Image source={{uri : dish.image}} style={styles.image}/>
