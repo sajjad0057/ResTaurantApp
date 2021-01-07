@@ -5,6 +5,7 @@ import MenuScreen from "./screens/MenuScreen";
 import DishDetailScreen from "./screens/DishDetailScreen";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { createStackNavigator } from "@react-navigation/stack";
+import Icon from "./components/Icon";
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -15,6 +16,7 @@ const MenuStack = () => {
       initialRouteName="Home"
       headerMode="screen"
       screenOptions={{
+        headerRight:()=>(<Icon/>),
         headerTintColor: "white",
         headerStyle: { backgroundColor: "#fc4d0d" },
         headTitleStyle: { fontWeight: "bold" },
