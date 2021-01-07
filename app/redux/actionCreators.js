@@ -12,7 +12,10 @@ export const loadDishes = dishes =>{
 }
 
 export const getDishes = ()=>dispatch=>{
-    axios.get("http:localhost:3000/dishes")
-    .then(response=>console.log("getDishes  response----> : ",response))
+    axios.get("https://restaurantapp-cea68-default-rtdb.firebaseio.com/dishes.json")
+    .then(response=>{
+        console.log("getDishes  response----> : ",response)
+        dispatch(loadDishes(response.data))
+    })
     .catch(error=>console.log("getDishes  error----> : ",error))
 }
