@@ -19,3 +19,18 @@ export const getDishes = ()=>dispatch=>{
     })
     .catch(error=>console.log("getDishes  error----> : ",error))
 }
+
+
+export const addToFavourites = dish =>{
+    return {
+        type :actionTypes.ADD_TO_FAVOURITES,
+        payload : dish,
+    }
+}
+
+export const removeFavourites = dishId =>{
+    return {
+        type : actionTypes.REMOVE_TO_FAVOURITES,
+        payload : dishId,
+    }
+}
