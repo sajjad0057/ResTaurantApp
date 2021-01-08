@@ -1,6 +1,7 @@
 import React from 'react'
-import { FlatList, StyleSheet, Text, View } from 'react-native'
+import { FlatList, Text, View } from 'react-native'
 import { connect } from 'react-redux'
+import FavouriteCard from '../components/FavouriteCard'
 
 const mapStateToProps = state =>{
     return {
@@ -15,7 +16,7 @@ const FavouritesScreen = (props) => {
             <FlatList
             data={props.favourites}
             renderItem={({item})=>(
-                <Text>{item.name}</Text>
+                <FavouriteCard item={item}/>
             )}
             keyExtractor={item=>item.id.toString()}
             />
@@ -27,4 +28,4 @@ const FavouritesScreen = (props) => {
 
 export default connect(mapStateToProps)(FavouritesScreen)
 
-const styles = StyleSheet.create({})
+

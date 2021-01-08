@@ -23,14 +23,14 @@ const DishDetailScreen = (props) => {
   //const route = useRoute()
   //console.log("DishDetailScreen route---->: ", route.params.dish);
   //console.log("DishDetailScreen ---->: ",dish);
-  console.log("DishDetailScreen  props.favourites---->: ",props.favourites);
+  //console.log("DishDetailScreen  props.favourites---->: ",props.favourites);
 
   const isFavourite = props.favourites.some((item) => item.id === dish.id);
-  console.log("isFavourite---->",isFavourite);
+  //console.log("isFavourite---->",isFavourite);
 // some() js function return true or false base on conditional check of array
 
   const markFavourite = (dish) => {
-    console.log("DishDetailScreen  markFavourite dish---->: ",dish.id);
+    //console.log("DishDetailScreen  markFavourite dish---->: ",dish.id);
       if(isFavourite){
         props.removeFavourites(dish.id);
       }else{
