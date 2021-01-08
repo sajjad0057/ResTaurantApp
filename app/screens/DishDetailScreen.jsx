@@ -7,7 +7,6 @@ import { addToFavourites, removeFavourites } from "../redux/actionCreators";
 
 const mapStateToProps = (state) => {
   return {
-    dishes:state.dishes,
     favourites: state.favourites,
   };
 };
